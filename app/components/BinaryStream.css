@@ -1,0 +1,21 @@
+.binary-stream-container {
+    overflow: hidden; /* Hide the overflow to create the infinite effect */
+    white-space: nowrap;
+    width: 100%;
+    height: 50vh; /* Fill the viewport height */
+    display: flex;
+    flex-direction: column; /* Stack the binary streams vertically */
+    justify-content: center;
+    background-color: ; /* Background color for the binary stream */
+  }
+  
+
+  .binary-stream {
+    display: inline-block;
+    font-family: 'Courier New', monospace; /* Monospaced font for a classic binary look */
+    font-size: 24px; /* Adjust font size as needed */
+    color: white; /* Green color for the binary numbers */
+    opacity: 5%;
+    margin: 1px 0; /* Spacing between lines */
+  }
+  

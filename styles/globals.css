@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Default custom cursor */
+html {
+    cursor: url('../public/images/cursor-2.png') 32 32, auto;
+  }
+  
+  /* Custom cursor on hover */
+  a, button, .hover-element {
+    cursor: url('../public/images/cursor.png') 32 32, pointer;
+  }
+
+  header {
+    cursor: url('../public/images/cursor-2.png') 32 32, auto;
+  }
+  
