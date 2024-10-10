@@ -24,7 +24,7 @@ const TommyModel = () => {
   return (
     <Canvas
       camera={{ position: [0, 5, 10], fov: 60 }}  // Camera higher on Y-axis, looking down
-      style={{ width: '100%', height: '100%' }}
+      style={{ width: '50%', height: '100%' }}
     >
       <ambientLight intensity={2.5} />
       <Model isUserInteracting={isUserInteracting} />

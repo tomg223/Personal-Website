@@ -138,11 +138,15 @@ const scrollToSection = (ref: React.RefObject<HTMLDivElement>) => {
       <header className="fixed top-0 left-0 right-0 z-50 bg-blue-900 text-white p-5 flex justify-between items-center">
         <button onClick={() => scrollToSection(homeRef)} className="text-2xl font-bold">Thomas Gansa</button>
         
-        <nav className="space-x-6">
-          <button onClick={() => scrollToSection(experienceRef)} className="hover:text-gray-300">Experience</button>
-          <button onClick={() => scrollToSection(musicRef)} className="hover:text-gray-300">Music</button>
-          <button onClick={() => scrollToSection(contactRef)} className="hover:text-gray-300">Contact</button>
-        </nav>
+        <nav className="flex space-x-6 md:space-x-6 flex-wrap md:flex-nowrap">
+  <div className="flex w-full justify-center space-x-6 md:w-auto">
+    <button onClick={() => scrollToSection(experienceRef)} className="hover:text-gray-300">Experience</button>
+    <button onClick={() => scrollToSection(contactRef)} className="hover:text-gray-300">Contact</button>
+  </div>
+  <div className="w-full flex justify-center mt-4 md:mt-0">
+    <button onClick={() => scrollToSection(musicRef)} className="hover:text-gray-300">Music</button>
+  </div>
+</nav>
       </header>
       
       {/* Main content */}
@@ -161,7 +165,7 @@ const scrollToSection = (ref: React.RefObject<HTMLDivElement>) => {
           </div>
 
           {/* Model */}
-          <div className="absolute top-10 w-full flex justify-center items-center" style={{ height: '650px', zIndex: 1 }}>
+          <div className="absolute top-10 w-full flex justify-center items-center" style={{ height: '650px', zIndex: 1, marginTop: '32px' }}>
             <TommyModel />
             
           </div>
@@ -170,7 +174,7 @@ const scrollToSection = (ref: React.RefObject<HTMLDivElement>) => {
   {/* Introduction text centered underneath */}
   <div
     className="flex flex-col items-center text-center mt-0 mb-0 px-10"
-    style={{ marginBottom: '-20px' }} // Adjust as needed
+    style={{ marginBottom: '-20px',marginTop: '70px'}} // Adjust as needed
   >
     <br></br><br></br><br></br>
     <h1 className={`text-6xl font-extrabold mt-0 mb-0`}>Hi! I'm Tommy.</h1>
