@@ -4,15 +4,19 @@
 
 /* Default custom cursor */
 html {
-    cursor: url('../public/images/cursor-2.png') 32 32, auto;
+  cursor: pointer;
+  }
+
+  h1 {
+    font: font-extrabold;
   }
   
   /* Custom cursor on hover */
   a, button, .hover-element {
-    cursor: url('../public/images/cursor.png') 32 32, pointer;
+    cursor: pointer;
   }
 
   header {
-    cursor: url('../public/images/cursor-2.png') 32 32, auto;
+    cursor: pointer;
   }
   

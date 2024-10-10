@@ -3,7 +3,7 @@ import './ExperienceItem.css'; // Make sure the path is correct
 
 const ExperienceItem = ({ title, description, date, link }) => {
   return (
-    <div className="experience-item custom-cursor">
+    <div className="experience-item ">
       {/* Timeline Dot */}
       <div className="timeline-dot"></div>
       {/* Vertical Line */}

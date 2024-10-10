@@ -1,10 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
+  // Remove or comment out the experimental.appDir setting
+  // experimental: {
+  //   appDir: true,
+  // },
+  experimental:{
     appDir: true,
   },
   images: {
-    unoptimized: true, // Disable image optimization to check if that’s causing the issue
+    unoptimized: true,
   },
 };
 

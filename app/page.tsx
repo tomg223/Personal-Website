@@ -2,6 +2,10 @@
 import ContactForm from './components/ContactForm'; // Import ContactForm
 import React, { useRef } from 'react'; // Import useRef
 import Image from 'next/image'
+import dynamic from 'next/dynamic';
+
+const TommyModel = dynamic(() => import('./components/tommy.js'), { ssr: false });
+
 
 
 import { Inter } from '@next/font/google';
@@ -11,6 +15,7 @@ import ProjectCard from './components/ProjectCard'; // Import the ProjectCard co
 import '/styles/globals.css';
 import SongRow from './components/SongRow'; // Import SongRow
 import BinaryStream from './components/BinaryStream';
+import TommyStream from './components/TommyStream';
 import ThisWebsite from '../images/projects/this-website.png';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -127,8 +132,9 @@ const scrollToSection = (ref: React.RefObject<HTMLDivElement>) => {
   
 
   return (
-    <div className={`scroll-smooth ${inter.className} cursor-custom`}>
+    <div className={`scroll-smooth ${inter.className}`}>
       {/* Header */}
+    
       <header className="fixed top-0 left-0 right-0 z-50 bg-blue-900 text-white p-5 flex justify-between items-center">
         <button onClick={() => scrollToSection(homeRef)} className="text-2xl font-bold">Thomas Gansa</button>
         
@@ -138,20 +144,47 @@ const scrollToSection = (ref: React.RefObject<HTMLDivElement>) => {
           <button onClick={() => scrollToSection(contactRef)} className="hover:text-gray-300">Contact</button>
         </nav>
       </header>
+      
       {/* Main content */}
       <main className="pt-20 bg-blue-900">
         {/* Home Section */}
-        <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-        <section ref={homeRef} id="home" className="flex flex-col justify-center items-start pb-0 pl-10 text-white">
-          <h1 className="text-6xl font-extrabold">Hi! I'm Tommy.</h1>
-          <p className="mt-4 text-xl">
-            I am a Computer Science student at Columbia University born and raised in Brooklyn, NY. <br />
-            My interests include full-stack development, music production, jazz piano, or any intersection of the three.
-          </p>
-          <p className="mt-4 text-xl">Scroll along to learn more about what I've done and where I'm going!</p>
-        </section>
-        
-        <BinaryStream />
+
+        <section
+  ref={homeRef}
+  id="home"
+  className="flex flex-col justify-center items-center pt-0 pb-0 mb-0 text-white"
+>
+  {/* Model at the top */}
+  <div className="absolute top-0 left-0 w-full h-full">
+    <br></br>
+            <TommyStream />
+          </div>
+
+          {/* Model */}
+          <div className="absolute top-10 w-full flex justify-center items-center" style={{ height: '650px', zIndex: 1 }}>
+            <TommyModel />
+            
+          </div>
+          <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+  
+  {/* Introduction text centered underneath */}
+  <div
+    className="flex flex-col items-center text-center mt-0 mb-0 px-10"
+    style={{ marginBottom: '-20px' }} // Adjust as needed
+  >
+    <br></br><br></br><br></br>
+    <h1 className={`text-6xl font-extrabold mt-0 mb-0`}>Hi! I'm Tommy.</h1>
+    <p className={`mt-2 mb-0 text-xl ${inter.className}`}>
+      I am a Computer Science student at Columbia University born and raised in Brooklyn, NY.
+      <br />
+      My interests include full-stack development, music production, jazz piano, or any intersection of the three.
+    </p>
+    <p className={`mt-2 mb-0 text-xl ${inter.className}`}>
+      Scroll along to learn more about what I've done and where I'm going!
+    </p>
+  </div>
+</section>
+    <BinaryStream></BinaryStream>
         
         {/* Work Experience Section */}
         <section ref={experienceRef} id="experience" className="flex flex-col justify-start items-start pl-10 pr-10 pb-0 text-white">
