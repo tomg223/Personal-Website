@@ -1,6 +1,6 @@
-"use client"; // Add this directive
-import ContactForm from './components/ContactForm'; // Import ContactForm
-import React, { useRef } from 'react'; // Import useRef
+"use client"; 
+import ContactForm from './components/ContactForm'; 
+import React, { useRef } from 'react'; 
 import Image from 'next/image'
 import dynamic from 'next/dynamic';
 
@@ -9,11 +9,11 @@ const TommyModel = dynamic(() => import('./components/tommy.js'), { ssr: false }
 
 
 import { Inter } from '@next/font/google';
-import { motion } from 'framer-motion'; // Import motion
-import ExperienceItem from './components/ExperienceItem'; // Import the ExperienceItem component
-import ProjectCard from './components/ProjectCard'; // Import the ProjectCard component
+import { motion } from 'framer-motion'; 
+import ExperienceItem from './components/ExperienceItem'; 
+import ProjectCard from './components/ProjectCard'; 
 import '/styles/globals.css';
-import SongRow from './components/SongRow'; // Import SongRow
+import SongRow from './components/SongRow'; 
 import BinaryStream from './components/BinaryStream';
 import TommyStream from './components/TommyStream';
 import ThisWebsite from '../images/projects/this-website.png';
@@ -23,33 +23,33 @@ const inter = Inter({ subsets: ['latin'] });
 const songs = [
   {
     title: 'Jambles',
-    image: '/images/music/untitled.png', // Replace with the song's image URL
+    image: '/images/music/untitled.png', 
     audio: 'https://soundcloud.com/tom-gansa/jambles?si=298ce130290b43fabffe744438e410b7&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing', // Replace with the song's audio file URL
   },
   {
     title: 'Song Two',
-    image: '', // Replace with the song's image URL
-    audio: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3', // Replace with the song's audio file URL
+    image: '', 
+    audio: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3', 
   },
   {
     title: 'Song Three',
-    image: '', // Replace with the song's image URL
-    audio: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3', // Replace with the song's audio file URL
+    image: '', 
+    audio: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3', 
   },
   {
     title: 'Song Four',
-    image: '', // Replace with the song's image URL
-    audio: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3', // Replace with the song's audio file URL
+    image: '', 
+    audio: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3', 
   },
   {
     title: 'Song Five',
-    image: '', // Replace with the song's image URL
-    audio: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3', // Replace with the song's audio file URL
+    image: '', 
+    audio: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3', 
   },
   {
     title: 'Song Six',
-    image: '', // Replace with the song's image URL
-    audio: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3', // Replace with the song's audio file URL
+    image: '', 
+    audio: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3', 
   },
 ];
 
