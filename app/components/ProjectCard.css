@@ -1,9 +1,9 @@
 .project-card {
     position: relative;
-    width: 300px;  /* Adjust based on layout */
+    width: 300px;  
     height: auto;
-    min-height: 350px;  /* Adjust based on content */
-    background-color: white;  /* Ensures background is white */
+    min-height: 350px;  
+    background-color: white;  
   }
   
   .project-card-image {
@@ -11,7 +11,7 @@
   }
   
   .project-card-content {
-    position: relative;  /* Ensures that the hover overlay can position itself absolutely */
+    position: relative;  
   }
   
   .project-card-hover-content {
