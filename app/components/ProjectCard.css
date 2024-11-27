@@ -26,7 +26,7 @@
     padding: 1rem;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
-    background-color: white;  /* Explicit white background */
+    background-color: white;  
   }
   
   .project-card:hover .project-card-hover-content {
@@ -34,7 +34,7 @@
   }
   
   .project-card:hover .project-card-image {
-    opacity: 0;  /* Hides the image on hover */
+    opacity: 0; 
   }
   
   
