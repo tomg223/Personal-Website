@@ -1,39 +1,36 @@
-/* Remove background and set play button color */
+
 .custom-h5-audio-player {
-    background: transparent !important; /* No background */
-    box-shadow: none; /* Remove any default shadow */
-    color: white; /* Set control color to white */
-    border: none; /* Remove border */
-    padding: 0; /* Remove extra padding */
+    background: transparent !important;
+    box-shadow: none; 
+    color: white; 
+    border: none; 
+    padding: 0; 
   }
   
-  /* Style the play/pause button */
   .custom-h5-audio-player .rhap_button-clear {
-    color: white; /* White play button */
+    color: white; 
   }
   
-  /* Hide unwanted controls */
+  
   .custom-h5-audio-player .rhap_volume-container,
   .custom-h5-audio-player .rhap_time,
   .custom-h5-audio-player .rhap_download-progress {
-    display: none !important; /* Hide volume, time, and download progress */
+    display: none !important; 
   }
   
-  /* Style the progress bar container */
   .custom-h5-audio-player .rhap_progress-container {
-    width: 90%; /* Use a larger percentage for the progress bar */
-    padding: 0 0px; /* Adjust padding as needed */
+    width: 90%; 
+    padding: 0 0px; 
     display: flex;
-    align-items: center; /* Center the progress bar */
-    margin: 0 0; /* Center the progress bar in the container */
+    align-items: center;
+    margin: 0 0; 
 }
-  /* Style the progress bar */
   .custom-h5-audio-player .rhap_progress-bar {
-    background: rgba(255, 255, 255, 0.2); /* Slightly visible background */
-    height: 6px; /* Set a visible height for the progress bar */
-    border-radius: 3px; /* Rounded edges */
-    overflow: hidden; /* Hide overflow for rounded corners */
-    flex: 1; /* Allow the progress bar to stretch */
+    background: rgba(255, 255, 255, 0.2);
+    height: 6px; 
+    border-radius: 3px;
+    overflow: hidden; 
+    flex: 1; 
     position: relative;
 }
   
