@@ -6,7 +6,7 @@ const ContactForm = () => {
     phone: '',
     message: '',
   });
-  const [isSent, setIsSent] = useState(false); // New state to track submission status
+  const [isSent, setIsSent] = useState(false); 
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -18,9 +18,8 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
     console.log('Form submitted:', formData);
-    setIsSent(true); // Update the state to indicate that the form has been sent
+    setIsSent(true); 
   };
 
   return (
