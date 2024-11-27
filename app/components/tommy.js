@@ -1,4 +1,3 @@
-// components/tommy.js
 "use client";
 import React from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
@@ -7,12 +6,10 @@ import { useGLTF, OrbitControls } from '@react-three/drei';
 const Model = ({ isUserInteracting }) => {
   const { scene } = useGLTF('/model/tommy.glb');
 
-  // Adjust the scale to make the model bigger
-  scene.scale.set(4, 4, 4); // Adjust as needed
+  scene.scale.set(4, 4, 4); 
 
-  // Wrap the model in a group to adjust its position
   return (
-    <group position={[0, -2.45, 0]}> {/* Lower the model by 1 unit */}
+    <group position={[0, -2.45, 0]}> 
       <primitive object={scene} />
     </group>
   );
@@ -23,7 +20,7 @@ const TommyModel = () => {
 
   return (
     <Canvas
-      camera={{ position: [0, 5, 10], fov: 60 }}  // Camera higher on Y-axis, looking down
+      camera={{ position: [0, 5, 10], fov: 60 }}  
       style={{ width: '50%', height: '100%' }}
     >
       <ambientLight intensity={2.5} />
@@ -33,8 +30,8 @@ const TommyModel = () => {
         autoRotateSpeed={5}
         enableZoom={false}
         enablePan={false}
-        maxPolarAngle={Math.PI / 2} // Allow a higher viewing angle
-        minPolarAngle={Math.PI / 3} // Prevent from looking too far down
+        maxPolarAngle={Math.PI / 2} 
+        minPolarAngle={Math.PI / 3} 
         onStart={() => setIsUserInteracting(true)}
         onEnd={() => setIsUserInteracting(false)}
       />
