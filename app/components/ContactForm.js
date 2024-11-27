@@ -59,7 +59,7 @@ const ContactForm = () => {
       <button
         type="submit"
         className="bg-blue-900 text-white mb-8 text-xl px-4 py-2 rounded hover:bg-blue-800"
-        disabled={isSent} // Disable the button after submission
+        disabled={isSent} 
       >
         {isSent ? 'Sent!' : 'Send Message'}
       </button>
