@@ -15,6 +15,7 @@ import ProjectCard from './components/ProjectCard';
 import '/styles/globals.css';
 import SongRow from './components/SongRow'; 
 import BinaryStream from './components/BinaryStream';
+import ResumeButton from './components/ResumeButton';
 import TommyStream from './components/TommyStream';
 import ThisWebsite from '../images/projects/this-website.png';
 
@@ -64,25 +65,25 @@ const workExperience = [
     title: 'Software Developer Intern @ Tonic Group',
     description: 'Developed responsive, user-friendly websites for clients including a Bellevue and NYU hospitals healthcare provider training website on eczema treatment using JS, Angular, RxJS, Karma, Jasmine, and Protractor.',
     date: 'May 2024 - August 2024',
-    link: 'https://example.com',
+    link: 'https://www.tonicgroup.com/',
   },
   {
     title: 'Frontend/Backend Engineer Intern @ BuybleNYC',
     description: 'Collaborated in a 3-person dev team to build an app for a small early-stage Craigslist-style student startup founded by Columbia graduates using Dart, Flutter, and Firebase. Available on popular appstores.',
     date: 'May 2023 - Aug 2023',
-    link: 'https://example.com',
+    
   },
   {
     title: 'Math Tutor',
     description: 'Tutored students ranging from ages 10-16 on math subjects related to ACT/SAT prep and their classes.',
     date: 'Sep 2019 - March 2021',
-    link: 'https://example.com',
+    
   },
   {
     title: 'Student Internship in Technology @ Saint Ann’s High School',
     description: 'Provided school teachers and staff with friendly technical support, gaining familiarity with network and wireless protocols and architectures for large educational institution as well as worked with school data in spreadsheets.',
     date: 'Sep 2018 - Jun 2019',
-    link: 'https://example.com',
+    
   },
 ];
 
@@ -90,27 +91,30 @@ const projects = [
   {
     title: 'Personal Website',
     description: 'The personal website you are looking at was built with React, NextJS, Tailwind, and Framer Motion.',
-    image: '/images/projects/this-website.png', 
+    image: '/images/projects/this-website.png',
+    link: 'https://www.thomasgansa.com', // Replace with your actual link
   },
   {
     title: 'Image Processing Application',
     description: 'I built a Java-based image processing application with capabilities for histogram equalization, noise reduction, edge detection,bitwise operations, and convolution operations among many others. I used Java Swing to provide a GUI that facilitates intuitive image operations  ',
-    image: '/images/projects/image-processing-ss.png', 
+    image: '/images/projects/image-processing-ss.png',
+    link: 'https://github.com/tomg223/image-operations', // Replace with your actual link
   },
   {
     title: 'Command-Line Chat Application',
     description:'Developed a suite of Python scripts to simulate complex network protocols for my command line chat application, including Go-Back-N for reliable packet transmission and Distance Vector routing for dynamic network path calculation using the Bellman Ford algorithm. Used sockets, threading, custom packet design, packet handling, node operations, incorporating JSON for node communication and routing.',
-    image: '/images/projects/gbn.png', 
+    image: '/images/projects/gbn.png',
   },
   {
     title: 'Skate Spotter',
     description: 'Developed a Flask-based webserver to show skateboarders places to skate and serve as a locational archive for skateboarding history, integrating Google Maps API and managing dynamic content with SQLAlchemy. Configured and managed a PostgreSQL database connection, employing advanced SQL operations for live data insertion and retrieval.',
-    image: '/images/projects/skatedb.png', 
+    image: '/images/projects/skatedb.png',
   },
   {
     title: 'French Conjugator',
     description: 'Created a French conjugation learning website using React, Flask, and postgreSQL enabling dynamic management of language flashcards and conjugation tests. Retrieved conjugations from API, and populated postgres database using API.',
-    image: '/images/projects/french.png', 
+    image: '/images/projects/french.png',
+    link: 'https://github.com/tomg223/french-conjugator', // Replace with your actual link
   },
 ];
 
@@ -196,42 +200,47 @@ const scrollToSection = (ref: React.RefObject<HTMLDivElement>) => {
 </section>
     <BinaryStream></BinaryStream>
         
-        {/* Work Experience Section */}
-        <section ref={experienceRef} id="experience" className="flex flex-col justify-start items-start pl-10 pr-10 pb-0 text-white">
-          <h2 className="text-5xl font-semibold">Experience</h2>
-          <p className="mt-4 text-xl">Here is my work experience and personal projects.</p>
-          
-          {/* Work Experience */}
-          <div className="mt-8">
-            <h3 className="text-4xl font-bold mb-4">Work</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {workExperience.map((item, index) => (
-                <ExperienceItem 
-                  key={index}
-                  title={item.title}
-                  description={item.description}
-                  date={item.date}
-                  link={item.link}
-                />
-              ))}
-            </div>
-          </div>
-          
-          {/* Projects */}
-          <div className="mt-8">
-            <h3 className="text-4xl font-bold mb-4">Projects</h3>
-            <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-8">
-              {projects.map((item, index) => (
-                <ProjectCard 
-                  key={index}
-                  title={item.title}
-                  description={item.description}
-                  image={item.image}
-                />
-              ))}
-            </div>
-          </div>
-        </section>
+       {/* Work Experience Section */}
+{/* Work Experience Section */}
+<section ref={experienceRef} id="experience" className="flex flex-col justify-start items-start pl-10 pr-10 pb-0 text-white">
+  <h2 className="text-5xl font-semibold">Experience</h2>
+  <p className="mt-4 text-xl">Here is my work experience and personal projects.</p>
+  
+  {/* Work Experience */}
+  <div className="mt-8">
+    <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+      <h3 className="text-4xl font-bold">Work</h3>
+      <ResumeButton resumeUrl="/Thomas_Gansa_Resume.docx (5).pdf" />
+    </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {workExperience.map((item, index) => (
+        <ExperienceItem 
+          key={index}
+          title={item.title}
+          description={item.description}
+          date={item.date}
+          link={item.link}
+        />
+      ))}
+    </div>
+  </div>
+  
+  {/* Projects */}
+  <div className="mt-8">
+    <h3 className="text-4xl font-bold mb-4">Projects</h3>
+    <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-8">
+      {projects.map((item, index) => (
+        <ProjectCard 
+          key={index}
+          title={item.title}
+          description={item.description}
+          image={item.image}
+          link={item.link}
+        />
+      ))}
+    </div>
+  </div>
+</section>
 
         <BinaryStream />
 
