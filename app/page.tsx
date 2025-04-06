@@ -55,6 +55,12 @@ const songs = [
 
 const workExperience = [
   {
+    title: 'Research Assistant @ CEAL(Computer Enabled Abilites Laboratory)',
+    description: 'Leading design and implementation of SwiftUI front-end for iOS exploration assistance system enabling blind and low-vision users to explore their environment using spatialized audio descriptions that leverage Google street view imagery. Handle real-time location data, historical information retrieval, head positional data, as well a 3d-spatial audio using Swift. Built real-time location smoothing Python script using Kalman Filtering for more accurate and natural location processing.',
+    date: 'Jan 2025 - Present',
+    link: 'https://ceal.cs.columbia.edu/',
+  },
+  {
     title: 'Software Developer Intern @ Tonic Group',
     description: 'Developed responsive, user-friendly websites for clients including a Bellevue and NYU hospitals healthcare provider training website on eczema treatment using JS, Angular, RxJS, Karma, Jasmine, and Protractor.',
     date: 'May 2024 - August 2024',
